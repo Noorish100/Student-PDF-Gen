@@ -48,7 +48,10 @@ public class ControllerPDF {
 
 		try {
 			String finalHtml = "";
-
+           String temp="temp1";
+           if(!s.getTemp().isEmpty()) {
+        	   temp=s.getTemp();
+           }
 			Context dataContext = impl.setData(s);
 			finalHtml = engine.process(s.getTemp(), dataContext);
 			// Convert HTML to PDF
