@@ -53,7 +53,7 @@ public class ControllerPDF {
         	   temp=s.getTemp();
            }
 			Context dataContext = impl.setData(s);
-			finalHtml = engine.process(s.getTemp(), dataContext);
+			finalHtml = engine.process(temp, dataContext);
 			// Convert HTML to PDF
 			ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 			PdfWriter pdfWriter = new PdfWriter(byteArrayOutputStream);
